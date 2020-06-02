@@ -49,6 +49,12 @@ jobs:
           uses: actions/download-artifact@v1
           with:
             name: calc
+        - name: get dir info
+          run: |
+            ls -la
+            chmod +x calc
+            ls -la
+            
         - name: run cd
           run: |
             chmod +x calc
