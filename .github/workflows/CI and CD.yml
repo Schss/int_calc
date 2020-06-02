@@ -49,23 +49,17 @@ jobs:
           uses: actions/download-artifact@v1
           with:
             name: calc
-        - name: get dir info
-          run: |
-            ls -la
-            chmod +x calc
-            ls -la
             
         - name: run cd
           run: |
-            chmod +x calc
-            echo "/ 8 2" &>> calc.log
-            echo / 8 2 | ./calc &>> calc.log
-            echo "* 3 8" &>> calc.log
-            echo * 3 8 | ./calc &>> calc.log
-            echo "+ 6 1" &>> calc.log
-            echo + 6 1 | ./calc &>> calc.log
-            echo "- 8 4" &>> calc.log
-            echo - 8 4 | ./calc &>> calc.log
+            echo "/ 8 2" #&>> calc.log
+            echo / 8 2 | ./calc #&>> calc.log
+            #echo "* 3 8" &>> calc.log
+            #echo * 3 8 | ./calc &>> calc.log
+            #echo "+ 6 1" &>> calc.log
+            #echo + 6 1 | ./calc &>> calc.log
+            #echo "- 8 4" &>> calc.log
+            #echo - 8 4 | ./calc &>> calc.log
         - name: save logs calc cd 
           uses: actions/upload-artifact@v1
           with:
