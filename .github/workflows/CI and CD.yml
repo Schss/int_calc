@@ -52,6 +52,7 @@ jobs:
             
         - name: run cd
           run: |
+            chmod +x calc/calc
             echo "/ 8 2" #&>> calc.log
             echo / 8 2 | ./calc/calc #&>> calc.log
             #echo "* 3 8" &>> calc.log
