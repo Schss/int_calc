@@ -7,7 +7,7 @@ on:
 jobs:
     CI:
       runs-on: ubuntu-latest
-# some shity comment
+
       steps:
       - uses: actions/checkout@v2
       
@@ -29,7 +29,14 @@ jobs:
           ./build/tests &> logs/tests.log
       - name: Upload t-logs
         uses: actions/upload-artifact@v1
-        #if: failure()
+        if: failure()
         with:
           name: tests logs
           path: logs/tests.log
+          
+      - name: save calc 
+        uses: actions/upload-artifact@v1
+        if: success()
+        with:
+          name: calc
+          path: build/calc
