@@ -55,12 +55,12 @@ jobs:
             chmod +x calc/calc
             echo "/ 8 2" &>> calc.log
             echo / 8 2 | ./calc/calc &>> calc.log
-            #echo "* 3 8" &>> calc.log
-            #echo * 3 8 | ./calc/calc &>> calc.log
+            echo "* 3 8" &>> calc.log
+            echo \* 3 8 | ./calc/calc &>> calc.log
             echo "+ 6 1" &>> calc.log
             echo + 6 1 | ./calc/calc &>> calc.log
-            #echo "- 8 4" &>> calc.log
-            #echo - 8 4 | ./calc/calc &>> calc.log
+            echo "- 8 4" &>> calc.log
+            echo - 8 4 | ./calc/calc &>> calc.log
         - name: save logs calc cd 
           uses: actions/upload-artifact@v1
           with:
