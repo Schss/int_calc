@@ -18,13 +18,13 @@ int main()
         op = f_add;
         break;
     case '-':
-        op = f_sub;
+        op = f_add;
         break;
     case '*':
-        op = f_mul;
+        op = f_add;
         break;
     case '/':
-        op = f_div;
+        op = f_add;
         break;
     default:
         std::cout << "Invalid operation\n";
